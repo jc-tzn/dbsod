@@ -1,0 +1,247 @@
+
+#settings
+{
+	font-family: Lucida Sans;
+	font-weight:bold;
+	display: none;
+}
+
+#options
+{
+	position: absolute;
+	top: 50px;
+}
+
+.jquery-ui
+{
+	font-size: 12px;
+}
+
+#startbutton
+{
+	font-size: 12px;
+}
+
+#select-laptop
+{
+	width: 150px;
+	height: 20px;
+	padding: 5px;
+	position: relative;
+}
+
+#select-td
+{
+	padding-left: 100px;
+}
+
+#logo
+{
+	display: inline;
+}
+
+.centered
+{
+	text-align: center;
+	min-width: 350px;
+}
+
+#explanations
+{
+	position: absolute;
+}
+
+#td1
+{
+	box-shadow: 0px 0px 10px black, 0px 0px 20px black;
+	background-color: black;
+	padding: 0px 0px 0px 0px;
+}
+
+#td2
+{
+	padding:10px 30px 20px 20px;
+	font-size: 14px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	box-shadow: 0px 0px 10px black;
+	background-color: white;
+}
+
+li > span
+{
+	color: #898989;
+	font-weight: normal;
+}
+
+#email
+{
+	text-decoration: none;
+	color: #7396C4;
+}
+
+
+
+
+
+
+
+
+
+#fakepagediv
+{
+	display: none;
+	background-color: #EBEBEB;
+}
+
+#fakepageimg
+{
+	display: inline-block;
+	position: absolute;
+}
+
+#bluescreen
+{
+	padding-top: 20px;
+	padding-left: 2px;
+	background-color: #000080;
+	cursor:url(./img/cursor.png),url(img/cursor.cur),default;
+	color: #ffffff;
+	line-height:115%;
+	display: none;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.font
+{
+	font-family: "Lucida Console";
+	font-size: 19px;
+	font-weight: normal;
+	text-shadow: 0em 0em #000000;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.spacing
+{
+	margin-left: 25px;
+}
+
+#blackscreen
+{
+	background-color: #000000;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	cursor:url(./img/cursor.png),url(img/cursor.cur),default;
+	line-height:150%;
+	display: none;
+}
+
+#underscore
+{
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 25px;
+	color: #FFFFFF;
+	font-size: 25px;
+}
+
+#laptop-logo
+{
+	display: inline-block;
+	position: absolute;
+}
+
+#errorrecoverytitle
+{
+	display: inline-block;
+	position: absolute;
+	background-color: #C7CCCD;
+	text-align: center;
+	font-size: 22px;
+}
+
+#errorrecoverycontent
+{
+	display: inline-block;
+	position: absolute;
+	font-size: 22px;
+	color: #C7CCCD;
+}
+
+#errorrecoveryfooter
+{
+	display: inline-block;
+	position: absolute;
+	background-color: #C7CCCD;
+	font-size: 22px;
+}
+
+.menurecovery
+{
+	display: inline-block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 60px;
+	padding-right: 10px;
+}
+
+.selected-choice
+{
+	color: black;
+	background-color: #C7CCCD;
+}
+
+.whitefont
+{
+	color: white;
+}
+
+.windows-logo
+{
+	position: absolute;
+	top: 0 px;
+	left: 0 px;
+}
+
+#loadingbar
+{
+	background-color: white;
+	display: block;
+	color: black;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#fakeformat1
+{
+	margin-bottom: 30px;
+}
+
+#troll-face
+{
+	position: absolute;
+}
+
+
+/* styles for small screen and preview */
+@media only screen and (max-width: 1250px) {
+    .spacing { margin-left: 10px; }
+}
+@media only screen and (max-height: 700px) {
+    .font{ font-size: 15px; }
+	#errorrecoverytitle { font-size: 17px;}
+	#errorrecoverycontent { font-size: 17px;}
+	#errorrecoveryfooter { font-size: 17px;}
+}
+

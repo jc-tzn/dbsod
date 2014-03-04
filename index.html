@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Dynamic BSOD Prank</title> 
+		 
+		<meta name="description" content="With this web-app you can prank your friends by triggering a fake Blue Screen of Death. The BSOD is dynamic and react to users input for more realism. Everything happens in the browser so nothing to install and it's free !" />
+		<meta name="keywords" content="BSOD, DBSOD, blue screen, blue screen of death, prank, bsod prank" />
+		<meta property="og:image" content="http://www.knightventure.net/img/dbsod.png" />
+		<meta property="og:title" content="Dynamic BSOD Prank" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.knightventure.net/dbsod/" />
+		<meta property="og:site_name" content="Dynamic BSOD Prank" />
+		<meta property="fb:admins" content="1171297560" />
+		
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/redmond/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="./template/ui.selectmenu.css" />
+		<link rel="stylesheet" type="text/css" href="./template./template.css" />
+		<link rel="icon" type="image/png" href="./img/favicon.png"> 
+		<link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
+		<script src="./template/ui.selectmenu.js"></script>
+		<script src="./script.js"></script>
+		<script src="./template./template.js"></script>
+		
+	</head>
+	
+	<body> 
+		
+		<div id="settings">
+			
+			<!-- <?php include($_SERVER['DOCUMENT_ROOT'] . './template/social.html'); ?>
+			<?php include($_SERVER['DOCUMENT_ROOT'] . './template/billboard.html'); ?> -->
+
+			<div id="top" class="black">
+				<span id="arrow" onclick="toggleTopbar();">
+					<img id="arrow-down" class="arrow" src="./template/img/arrow-down.png" alt="Arrow Down" />
+					<img id="arrow-up" class="arrow" src="./template/img/arrow-up.png" alt="Arrow Up" style="display: none;" />
+				</span>
+				<a href="../">
+					<img id="logo-kv" src="./template/img/logo.png" alt="Logo"/>
+				</a>
+			</div>
+				
+			<table id="options">
+				
+				<tr>
+					<th rowspan="4"><img id="logo" src="./img/dbsod.png" alt="DBSOD" /></th>
+					
+					<td class="centered" style="padding-top:30px;"><div class="radio jquery-ui">
+						<input type="radio" id="seven" name="radio-os" checked="checked" /><label for="seven">Windows 7</label>
+						<input type="radio" id="vista" name="radio-os" /><label for="vista">Windows Vista</label>
+						<input type="radio" id="xp" name="radio-os" /><label for="xp">Windows XP</label>
+					</div></td>
+				</tr>
+				
+				<tr><td class="centered">
+					<div class="radio jquery-ui">
+						<input type="radio" id="chrome" name="radio-browser" checked="checked" /><label for="chrome">Chrome</label>
+						<input type="radio" id="firefox" name="radio-browser" /><label for="firefox">Firefox</label>
+						<input type="radio" id="ie" name="radio-browser" /><label for="ie">IE 10+</label>
+					</div>
+				</td></tr>
+			
+				<tr><td id="select-td">
+					<select name="select-laptop" id="select-laptop">
+						<option value="acer">Acer</option>
+						<option value="asus">Asus</option>
+						<option value="compaq">Compaq</option>
+						<option value="dell">Dell</option>
+						<option value="fujitsu">Fujitsu</option>
+						<option value="hp">HP</option>
+						<option value="lenovo">Lenovo</option>
+						<option value="samsung">Samsung</option>
+						<option value="toshiba">Toshiba</option>
+						<option value="vaio">Vaio</option>
+						<option value="other">Other</option>
+					</select>
+				</td></tr>
+				
+				<tr><td class="centered">
+					<button id="startbutton" onclick="start()" >Start Prank</button>
+				</td></tr>
+			</table>
+			
+			<table id="explanations" cellspacing="30" class="last-item"><tr>
+				<td id="td1">
+					<embed
+						width="300" height="200"
+						src="http://www.youtube.com/v/?v=_yrlLiUOtfg" 
+						allowfullscreen="true" 
+						type="application/x-shockwave-flash">
+					</embed>
+				</td>
+				<td id="td2">
+					<p style="text-align:center;">INSTRUCTIONS:</p>
+					<ol>
+						<li><span>Put the window in fullscreen by pressing the F11 key</span></li>
+						<li><span>Switch to an other window (or to Desktop) by holding 'Alt' + 'Tab' or pressing the Windows key</span></li>
+						<li><span>The blue screen will be triggered when this window gets the focus back</span></li>
+						<li><span>Share your prank at <a id="email" href="mailto:video@knightventure.net">video@knightventure.net</a></span></li>
+					</ul>
+				</td>
+			</tr></table>
+			
+			<footer>
+				<table>
+					<tr>
+						<td>
+							<a href="mailto:info@knightventure.net" target="_blank" >
+								<img id="hover-footer-email" style="display:none;" src="./template/img/email-hover.png" alt="Email" />
+								<img id="footer-email" src="./template/img/email.png" alt="Email" />
+							</a>
+						</td>
+						<td>
+							<a href="http://www.facebook.com/knightventure" target="_blank" >
+								<img id="hover-footer-facebook" style="display:none;" src="./template/img/facebook-hover.png" alt="Facebook" />
+								<img id="footer-facebook" src="./template/img/facebook.png" alt="Facebook" />
+							</a>
+						</td>
+						<td>
+							<a href="https://plus.google.com/u/0/115073134814524375282" target="_blank" >
+								<img id="hover-footer-google" style="display:none;" src="./template/img/google-hover.png" alt="Google+" />
+								<img id="footer-google" src="./template/img/google.png" alt="Google+" />
+							</a>
+						</td>
+						<td>
+							<a href="https://twitter.com/KnightVenture" target="_blank" >
+								<img id="hover-footer-twitter" style="display:none;" src="./template/img/twitter-hover.png" alt="Twitter" />
+								<img id="footer-twitter" src="./template/img/twitter.png" alt="Twitter" />
+							</a>
+						</td>
+						<td>
+							<a href="http://www.youtube.com/user/jich83" target="_blank" >
+								<img id="hover-footer-youtube" style="display:none;" src="./template/img/youtube-hover.png" alt="Youtube" />
+								<img id="footer-youtube" src="./template/img/youtube.png" alt="Youtube" />
+							</a>
+						</td>
+					</tr>
+				</table>
+			</footer>
+			
+		</div><!-- /page settings-->
+
+		
+		<div id="fakepagediv">
+			<img id="fakepageimg" src="./img/fakeyoutubechrome.png" ></img>
+			
+		</div> <!-- /page fakepage-->
+		
+		
+		<div id="bluescreen" class="font" >
+	
+			A<span class="spacing">problem</span><span class="spacing">has</span><span class="spacing">been</span><span class="spacing">detected</span><span class="spacing">and</span><span class="spacing">windows</span><span class="spacing">has</span><span class="spacing">been</span><span class="spacing">shut</span><span class="spacing">down</span><span class="spacing">to</span><span class="spacing">prevent</span><span class="spacing">damage</span></br>
+			to<span class="spacing">your</span><span class="spacing">computer.</span></br>
+			</br>
+			The<span class="spacing">problem</span><span class="spacing">seems</span><span class="spacing">to</span><span class="spacing">be</span><span class="spacing">caused</span><span class="spacing">by</span><span class="spacing">the</span><span class="spacing">following</span><span class="spacing">file:</span><span class="spacing">SPCMDCON.SYS</span></br>
+			</br>
+			PAGE_FAULT_IN_NONPAGED_AREA</br>
+			</br>
+			If<span class="spacing">this</span><span class="spacing">is</span><span class="spacing">the</span><span class="spacing">first</span><span class="spacing">time</span><span class="spacing">you've</span><span class="spacing">seen</span><span class="spacing">this</span><span class="spacing">stop</span><span class="spacing">error</span><span class="spacing">screen,</span></br>
+			restart<span class="spacing">your</span><span class="spacing">computer.</span><span class="spacing">If</span><span class="spacing">this</span><span class="spacing">screen</span><span class="spacing">appears</span><span class="spacing">again</span><span class="spacing">follow</span></br>
+			these<span class="spacing">steps:</span></br>
+			</br>
+			Check<span class="spacing">to</span><span class="spacing">make</span><span class="spacing">sure</span><span class="spacing">any</span><span class="spacing">new</span><span class="spacing">hardware</span><span class="spacing">or</span><span class="spacing">software</span><span class="spacing">is</span><span class="spacing">properly</span><span class="spacing">installed.</span></br>
+			If<span class="spacing">this</span><span class="spacing">is</span><span class="spacing">a</span><span class="spacing">new</span><span class="spacing">installation,</span><span class="spacing">ask</span><span class="spacing">your</span><span class="spacing">hardware</span><span class="spacing">or</span><span class="spacing">software</span><span class="spacing">manufacturer</span></br>
+			for<span class="spacing">any</span><span class="spacing">windows</span><span class="spacing">update</span><span class="spacing">you</span><span class="spacing">might</span><span class="spacing">need.</span></br>
+			</br>
+			If<span class="spacing">problems</span><span class="spacing">continue,</span><span class="spacing">disable</span><span class="spacing">or</span><span class="spacing">remove</span><span class="spacing">any</span><span class="spacing">newly</span><span class="spacing">installed</span><span class="spacing">hardware</span></br>
+			or<span class="spacing">software.</span><span class="spacing">Disable</span><span class="spacing">BIOS</span><span class="spacing">memory</span><span class="spacing">options</span><span class="spacing">such</span><span class="spacing">as</span><span class="spacing">caching</span><span class="spacing">or</span><span class="spacing">shadowing.</span></br>
+			If<span class="spacing">you</span><span class="spacing">need</span><span class="spacing">to</span><span class="spacing">use</span><span class="spacing">Safe</span><span class="spacing">Mode</span><span class="spacing">to</span><span class="spacing">remove</span><span class="spacing">or</span><span class="spacing">disable</span><span class="spacing">components,</span><span class="spacing">restart</span></br>
+			your<span class="spacing">computer,</span><span class="spacing">press</span><span class="spacing">F8</span><span class="spacing">to</span><span class="spacing">select</span><span class="spacing">Advanced</span><span class="spacing">Startup</span><span class="spacing">options,</span><span class="spacing">and</span><span class="spacing">then</span></br>
+			select<span class="spacing">Safe</span><span class="spacing">Mode.</span></br>
+			</br>
+			Technical<span class="spacing">information:</span></br>
+			</br>
+			***<span class="spacing">STOP:</span><span class="spacing">0x00000050</span><span class="spacing">(0xFD3094C2,</span><span class="spacing">0x00000001,</span><span class="spacing">0xFBFE7617,</span><span class="spacing">0x00000000)</span></br>
+			</br>
+			</br>
+			***<span class="spacing">SPCMDCON.SYS</span><span class="spacing">-</span><span class="spacing">Address</span><span class="spacing">FBFE7617</span><span class="spacing">base</span><span class="spacing">at</span><span class="spacing">FBFE5000,</span><span class="spacing">DateStamp</span><span class="spacing">3d6dd67c</span></br>
+			</br>
+			Collecting<span class="spacing">data</span><span class="spacing">for</span><span class="spacing">crash</span><span class="spacing">dump</span><span class="spacing">...</span></br>
+			Initializing<span class="spacing">dump</span><span class="spacing">of</span><span class="spacing">physical</span><span class="spacing">memory.</span></br>
+			Beginning<span class="spacing">dump</span><span class="spacing">of</span><span class="spacing">physical</span><span class="spacing">memory.</span></br>
+			Dumping<span class="spacing">physical</span><span class="spacing">memory</span><span class="spacing">to</span><span class="spacing">disk:</span><span id="cpt" style="margin-left: 30px" >0</span>
+	
+		</div><!-- /page bluescreen-->
+		
+		
+		<div id="blackscreen" class="font" >
+		
+			<span id="underscore" class="font" ></span>
+			<img id="laptop-logo" src="./img/cursor.png" />
+			
+			<span id="errorrecoverytitle" >Windows Error Recovery</span>
+			
+			<span id="errorrecoverycontent" >
+				<span class="whitefont" >Windows<span class="spacing">did</span><span class="spacing">not</span><span class="spacing">shut</span><span class="spacing">down</span><span class="spacing">successfully.</span><span class="spacing">If</span><span class="spacing">this</span><span class="spacing">was</span><span class="spacing">due</span><span class="spacing">to</span><span class="spacing">the</span><span class="spacing">system</span><span class="spacing">not</span></br>
+				responding,<span class="spacing">or</span><span class="spacing">if</span><span class="spacing">the</span><span class="spacing">system</span><span class="spacing">was</span><span class="spacing">shut</span><span class="spacing">down</span><span class="spacing">to</span><span class="spacing">protect</span><span class="spacing">data,</span><span class="spacing">you</span><span class="spacing">might</span><span class="spacing">be</span></br>
+				able<span class="spacing">to</span><span class="spacing">recover</span><span class="spacing">by</span><span class="spacing">choosing</span><span class="spacing">one</span><span class="spacing">of</span><span class="spacing">the</span><span class="spacing">Safe</span><span class="spacing">Mode</span><span class="spacing">configurations</span><span class="spacing">from</span><span class="spacing">the</span></br>
+				menu<span class="spacing">below:</span></br></span>
+				(Use<span class="spacing">the</span><span class="spacing">arrow</span><span class="spacing">keys</span><span class="spacing">to</span><span class="spacing">highlight</span><span class="spacing">your</span><span class="spacing">choice.)</span></br>
+				</br>
+				
+				<span id="choice1" class="menurecovery" >Safe<span class="spacing">Mode</span></span><span id="recommendation"></span></br>
+				<span id="choice2" class="menurecovery" >Safe<span class="spacing">Mode</span><span class="spacing">with</span><span class="spacing">Networking</span></span></br>
+				<span id="choice3" class="menurecovery" >Safe<span class="spacing">Mode</span><span class="spacing">with</span><span class="spacing">Command</span><span class="spacing">Prompt</span></span></br></br>
+				<span id="choice4" class="menurecovery selected-choice" >Start<span class="spacing">Windows</span><span class="spacing">Normally</span></span></br></br>
+				
+				<div id="msgtimer" >Seconds<span class="spacing">until</span><span class="spacing">the</span><span class="spacing">highlighted</span><span class="spacing">choice</span><span class="spacing">will</span><span class="spacing">be</span><span class="spacing">selected</span><span class="spacing">automatically:<span id="timer" class="spacing" >30</span></div>
+				<span class="whitefont">Description: </span><span id="description" ><span class='spacing'>Start</span><span class='spacing'>Windows</span><span class='spacing'>with</span><span class='spacing'>its</span><span class='spacing'>regular</span><span class='spacing'>settings.</span></span>
+			</span>
+			
+			<span id="errorrecoveryfooter" >ENTER=Choose</span>
+			
+			<!--<img id="windows-logo" ></img>-->
+			
+			<img id="troll-face" src="./img/trollface.png" ></img>
+			
+		</div>
+		
+	</body>
+</html>
+
+
